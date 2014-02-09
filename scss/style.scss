@@ -1,0 +1,244 @@
+/*!
+Theme Name: Abandoned Apparel
+Theme URI: http://www.timothyvoice.com/abandoned_apparel
+Description: Main theme for Abandoned Apparel
+Author: Timothy Voice
+Author URI: http://www.timothyvoice.com
+Version: 1.0
+Tags: Foundation, Responsive, Apparel, Clean
+*/
+
+/* Table of Contents
+* ============================= 
+*	0 Global
+*	1 Zurb Foundation Imports
+*	2 Variables
+*	3 Navigation
+*	4 UI
+*	5 Structure
+*	6 Content
+*	7 Typography
+*	8 Media Queries
+* =============================  
+*/
+
+/* ============================ 
+	0 Global
+   ============================ */
+html, body {
+  height: 100%;
+}
+
+.alpha {
+  	padding-left: 0px !important;
+}
+
+.beta {
+	padding-right: 0px !important;
+}
+
+/* ============================ 
+	1 Zurb Foundation Imports 
+   ============================ */
+
+@import "settings";
+@import "foundation";
+@import "normalize";
+
+/* ============================ 
+	2 Variables + Mixins
+   ============================ */
+
+// colors
+$green:hsla(152,100%,20%,1);
+$black:hsla(0,0%,0%,1);
+$gray:hsla(0, 0%, 85%, 1);
+$dark-gray:hsla(0, 0%, 65%, 1);
+$white:hsla(100,100%,100%,1);
+$dark-green:hsla(152,100%,15%,1);
+$transparent-green:hsla(152,100%,20%,0.1);
+
+// borders and backgrounds
+$dark-border:0.75rem solid $black;
+$light-border:0.15rem solid $black;
+$background: url('../../assets/images/background.png') repeat;
+
+// typography
+$font-family: "Helvetica";
+$heavy-text:800;
+$medium-text:400;
+$light-text:200;
+
+@mixin dead-center($content-width, $content-height) {
+	border: $dark-border;
+	font-family: Verdana, Geneva, Arial, sans-serif;
+	margin-left: (-1 * $content-height/2);
+	position: absolute;
+	top: (-1 * $content-height/2);
+	left: 50%;
+	width: $content-width;
+	height: $content-height;
+	visibility: visible;
+}
+
+/* ============================ 
+	3 Navigation
+   ============================ */   
+
+/* ============================ 
+	4 UI
+   ============================ */   
+
+/* ============================ 
+	5 Structure
+   ============================ */   
+
+/* ============================ 
+	6 Content
+   ============================ */   
+
+
+
+.horizon {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	width: 100%;
+	height: 1px;
+	overflow: visible;
+	visibility: visible;
+	display: block;
+}
+
+.content {
+	@include dead-center(300px, 300px);
+}
+
+.content {
+	margin-top: -4rem;
+}
+
+.tumblr, .twitter {
+	display: inline-block;
+	font-size: 2.5rem;
+	border: $light-border;
+	color: $white;
+	background-color: $black;
+	margin-top: 1rem;
+	margin: 1rem 0.5rem;
+	a {
+		color: $white;
+	}
+}
+
+.image {
+	float: right;
+}
+
+.details {
+	p {
+		font-size: 1.5rem;
+		display: inline-block;
+	}
+	i {
+		font-size: 3rem;
+		display: inline-block;
+		vertical-align: middle;
+		padding-right: 1rem;
+	}
+	a {
+		color: $black;
+		border-bottom: $light-border;
+		padding-bottom: 0.25rem;
+	}
+}
+
+/* ============================ 
+	7 Typography
+   ============================ */   
+
+h1,h2,h3,h4,h5,p,a {		
+	font-family: "Helvetica";
+}
+
+h1.title {
+	font-weight: $heavy-text;
+	font-size: 2rem;
+	letter-spacing: -2px;
+	display: block;
+	margin: 0.75rem 0 0 0;
+	text-align: center;
+}
+
+h3.tagline {
+	font-weight: $light-text;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+/* ============================ 
+	8 Media Queries
+   ============================ */   
+
+
+@media #{$small-up} { }
+
+@media #{$small-only} { 
+	/* .branding {
+		margin-top: 10rem;
+	} */
+	.twitter, .tumblr {
+		margin: 0.5;
+	}
+
+	.content {
+	@include dead-center(250px, 250px);
+
+	h1.title {
+		font-size: 1.7rem;
+	}
+
+	h3.tagline {
+		font-size: 1.25rem;
+	}
+}
+	.details {
+		padding-top: 1rem;
+		p {
+			font-size: 1rem;
+		}
+		i {
+			font-size: 1.5rem;
+			padding-right: 0.25rem;
+		}
+	}
+}
+
+@media #{$medium-up} { }
+
+@media #{$medium-only} { 
+	.details {
+		padding-top: 1rem;
+		p {
+			font-size: 1.5rem;
+		}
+		i {
+			font-size: 2rem;
+			padding-right: 0.25rem;
+		}
+	}
+}
+
+@media #{$large-up} { }
+
+@media #{$large-only} { }
+
+@media #{$xlarge-up} { }
+
+@media #{$xlarge-only} { }
+
+@media #{$xxlarge-up} { }
+
+@media #{$xxlarge-only} { } 

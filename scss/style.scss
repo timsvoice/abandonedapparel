@@ -51,16 +51,17 @@ html, body {
 
 // colors
 $green:hsla(152,100%,20%,1);
-$black:hsla(0,0%,0%,1);
-$gray:hsla(0, 0%, 85%, 1);
-$dark-gray:hsla(0, 0%, 65%, 1);
-$white:hsla(100,100%,100%,1);
+$black:hsla(0,0%,35%,1);
+$gray:hsla(0, 0%, 65%, 1);
+$dark-gray:hsla(0, 0%, 95%, 1);
+$white:hsla(240,100%,99%,1);
 $dark-green:hsla(152,100%,15%,1);
-$transparent-green:hsla(152,100%,20%,0.1);
+$transparent-black:hsla(0,0%,35%,0.4);
 
 // borders and backgrounds
-$dark-border:0.75rem solid $black;
-$light-border:0.15rem solid $black;
+$dark-border:0.1rem solid $dark-gray;
+$light-border:0.15rem solid $gray;
+$underline:0.15rem solid $gray;
 $background: url('../../assets/images/background.png') repeat;
 
 // typography
@@ -85,19 +86,75 @@ $light-text:200;
 	3 Navigation
    ============================ */   
 
+.navigation {
+	background-color: $transparent-black;
+	.top-bar {
+		background: inherit;
+		.name h1 a {
+			width: 100%;
+			font-weight: $medium-text;
+		}
+	}
+	.top-bar-section {
+		ul {
+			background: inherit;
+		}
+		li:not(.has-form) a:not(.button) {
+			background: inherit;
+		}
+	} 
+}
+
 /* ============================ 
 	4 UI
    ============================ */   
+
+	ul.tags {
+		display: inline-block;
+		margin: 0;
+		li {
+			list-style: none;
+		}
+	}
 
 /* ============================ 
 	5 Structure
    ============================ */   
 
+.container {
+	background: white;
+	margin-top: 1rem;
+	padding: 1rem 0 0;
+}
+
+
 /* ============================ 
 	6 Content
    ============================ */   
 
+body {
+	background: none;
+}
 
+html { 
+  background: url(images/beam.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.horizon-line {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	width: 100%;
+	height: 3px;
+	overflow: visible;
+	visibility: visible;
+	display: block;
+}
 
 .horizon {
 	text-align: center;
@@ -137,20 +194,35 @@ $light-text:200;
 }
 
 .details {
-	p {
-		font-size: 1.5rem;
+	margin-top: 1rem;
+	padding-bottom: 0.5rem;
+	background-color: $dark-gray;
+	border-top: $dark-border;
+	.author {
+		margin-left: 1rem;
 		display: inline-block;
+	}
+	p {
+		font-size: 1rem;
+		display: inline-block;
+		color: $gray;
+	}
+	img {
+			height: 1.5rem;
 	}
 	i {
-		font-size: 3rem;
+		font-size: 1.5rem;
 		display: inline-block;
 		vertical-align: middle;
-		padding-right: 1rem;
+		color: $black;
+	}
+	i.icon-pricetag {
+		
 	}
 	a {
-		color: $black;
-		border-bottom: $light-border;
-		padding-bottom: 0.25rem;
+		color: $gray;
+		border-bottom: $underline;
+		padding-bottom: 0.15rem;
 	}
 }
 
@@ -178,6 +250,20 @@ h3.tagline {
 	margin: 0;
 }
 
+.branding {
+	padding: 1.5rem;
+	margin: 1rem;
+	h1 {
+		text-align: center;
+		color: $white;
+		font-weight: $heavy-text;
+		font-size: 4.25rem;
+		text-shadow: 0px 6px 3px rgba(0,0,0,1),
+	             0px 10px 13px rgba(0,0,0,0.1),
+	             0px 18px 23px rgba(0,0,0,0.1);
+	}
+}
+
 /* ============================ 
 	8 Media Queries
    ============================ */   
@@ -203,30 +289,92 @@ h3.tagline {
 	h3.tagline {
 		font-size: 1.25rem;
 	}
-}
-	.details {
-		padding-top: 1rem;
-		p {
-			font-size: 1rem;
-		}
-		i {
-			font-size: 1.5rem;
-			padding-right: 0.25rem;
+	ul.apparel-post {
+		li {
+			padding-right: 0rem;
 		}
 	}
 }
+	.container {
+		background: white;
+		margin-top: 1rem;
+		padding: 0.5rem 0 0;
+		.image {
+			padding-right:0.5rem;
+			padding-left:0.5rem;
+		}
+}
+	.details {
+		margin-top: .5rem;
+		p {
+			margin-bottom: 0;
+			font-size: 0.75rem;
+		}
+		img {
+			height: 1rem;
+		}
+		.tags {			
+			margin-top: 0.25rem;
+			clear: both;
+		}
+		.location {
+			margin-top: 0.15rem;
+			display: inline-block;
+			float: left;
+		}
+		.reblog {
+			margin-top: 0.15rem;
+			display: inline-block;
+			float: right;
+			vertical-align: middle;
+		}
+		.likes {
+			margin-top: 0.15rem;
+			margin-right: 0.5rem;
+			float: right;
+			display: inline-block;
+		}
+		.author {
+			
+		}
+	}
 
-@media #{$medium-up} { }
+}
+
+@media #{$medium-up} {
+
+	.details {
+		p {
+			margin-bottom: 0;
+		}
+		.tags {			
+			margin-top: 0.25rem;
+			clear: both;
+		}
+		.location {
+			margin-top: 0.15rem;
+			display: inline-block;
+			float: left;
+		}
+		.reblog {
+			display: inline-block;
+			float: right;
+			vertical-align: middle;
+		}
+		.likes {
+			margin-top: 0.15rem;
+			margin-right: 0.5rem;
+			float: right;
+			display: inline-block;
+		}
+	}
+
+ }
 
 @media #{$medium-only} { 
-	.details {
-		padding-top: 1rem;
-		p {
-			font-size: 1.5rem;
-		}
-		i {
-			font-size: 2rem;
-			padding-right: 0.25rem;
+	.branding {
+		h1 {
+			font-size: 3rem;
 		}
 	}
 }

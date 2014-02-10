@@ -1,163 +1,130 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+    
+  <title>{Title}</title>
+
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation</title>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Timothy Voice">
+    <meta name="author" content="Timothy Voice">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="stylesheets/app.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
+  
+  <!-- CSS 
+    ================================================== -->
+    <link rel='stylesheet' href='style.css' type='text/css' media='screen' />
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/ionicons.css">
+
+
+  <!-- TYPOGRAPHY
+    ================================================== -->  
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,400italic,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/ionicons.css">
+  
+      
+  <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="css/assets/images/favicon.ico">
+    <link rel="apple-touch-icon" href="css/assets/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="css/assets/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="css/assets/images/apple-touch-icon-114x114.png">
+    
+  <!-- Analytics
+    ================================================== -->
+
+    <!-- 
+      This script enables structural HTML5 elements in old IE.
+      http://code.google.com/p/html5shim/
+    -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
   </head>
   <body>
-    <div class="row">
-      <div class="large-12 columns">
-        <h1>Welcome to Foundation</h1>
-      </div>
-    </div>
+   <div class="navigation">
+        <nav class="top-bar" data-topbar>
+        <ul class="title-area show-for-small-only">
+          <li class="name">
+            <h1><a href="#">Abandoned Apparel</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"></a></li>
+        </ul>
     
-    <div class="row">
-      <div class="large-12 columns">
-        <div class="panel">
-          <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-          <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-          <p>Once you've exhausted the fun in this document, you should check out:</p>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-          <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-        </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-            </div>        
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="large-8 medium-8 columns">
-        <h5>Here&rsquo;s your basic grid:</h5>
-        <!-- Grid Example -->
-
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="callout panel">
-              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-        </div>
+      <section class="top-bar-section">
+        <ul class="left">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">RANDOM</a></li>
+        </ul>
+      </section>
+    </nav>
+    </div><!--contain to grid-->
         
-        <hr />
-                
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-        <form>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-12.columns" />
-            </div>
+        <div class="row hide-for-small">
+            <div class="small-10 medium-10 large-10 small-centered columns branding">
+            <h1>Abandoned Apparel</h1>
           </div>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <div class="row collapse">
-                <label>Input Label</label>
-                <div class="small-9 columns">
-                  <input type="text" placeholder="small-9.columns" />
-                </div>
-                <div class="small-3 columns">
-                  <span class="postfix">.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Select Box</label>
-              <select>
-                <option value="husker">Husker</option>
-                <option value="starbuck">Starbuck</option>
-                <option value="hotdog">Hot Dog</option>
-                <option value="apollo">Apollo</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 medium-6 columns">
-              <label>Choose Your Favorite</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-            </div>
-            <div class="large-6 medium-6 columns">
-              <label>Check these out</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Textarea Label</label>
-              <textarea placeholder="small-12.columns"></textarea>
-            </div>
-          </div>
-        </form>
-      </div>     
-
-      <div class="large-4 medium-4 columns">
-        <h5>Try one of these buttons:</h5>
-        <p><a href="#" class="small button">Simple Button</a><br/>
-        <a href="#" class="small radius button">Radius Button</a><br/>
-        <a href="#" class="small round button">Round Button</a><br/>            
-        <a href="#" class="medium success button">Success Btn</a><br/>
-        <a href="#" class="medium alert button">Alert Btn</a><br/>
-        <a href="#" class="medium secondary button">Secondary Btn</a></p>           
-        <div class="panel">
-          <h5>So many components, girl!</h5>
-          <p>A whole kitchen sink of goodies comes with Foundation. Checkout the docs to see them all, along with details on making them your own.</p>
-          <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
         </div>
-      </div>
-    </div>
+
+        <div class="row">
+          
+              <div class="small-11 medium-8 large-8 small-centered columns container clearfix">                  
+                <div class="image small-12 columns">
+                    <img src="images/black-glove.png" alt="{PhotoAlt}" />
+                </div>
+                <div class="details small-12 columns">              
+                          
+                  <div class="location">
+                    <img src="http://static.tumblr.com/ahchqqh/Jddn0rjqh/ios7-location.png" alt="">
+                    <p>SoHo, New York</p>
+                  </div><!--location-->
+                  
+                  <div class="reblog">
+                    <img src="http://static.tumblr.com/ahchqqh/3kFn0rjyx/share.png" alt="">
+                  </div>
+
+                  <div class="likes">
+                    <img src="http://static.tumblr.com/ahchqqh/bUon0rjud/heart.png" alt="">
+                    <p>104</p>
+                  </div><!--likes-->
+
+                  <div class="author">
+                    <img src="http://static.tumblr.com/ahchqqh/9U8n0rjht/ios7-person.png" alt="">
+                    <a href=""><p>TVEE</p></a>
+                  </div>
+
+
+                  
+                  <div class="tags">              
+                    <img src="http://static.tumblr.com/ahchqqh/zI5n0rjsz/pricetag.png" alt=""> 
+                      <ul class="tags">
+                        <li>
+                            <p><a href="{TagURL}">Tag</a></p>
+                        </li>
+                      </ul>
+                  </div><!--tags--> 
+
+                </div><!--details-->
+            </div><!--container-->        
+        </div>
 
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
+    <script src="bower_components/foundation/js/app.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+    <script src="js/javascript.js"></script>
+    
+    <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+
+    <script> $(document).foundation(); </script>
   </body>
 </html>
